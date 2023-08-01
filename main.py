@@ -134,4 +134,4 @@ elif nav_selection == "My Projects":
 
 
 st.markdown("---")
-st.write("Contact: preetshah0707@gmail.com | Follow me on [LinkedIn](https://www.linkedin.com/in/yourprofile/)")
+st.write("Contact: preetshah0707@gmail.com | Follow me on [LinkedIn](https://www.linkedin.com/in/preet-shah-176a2822b/)")
