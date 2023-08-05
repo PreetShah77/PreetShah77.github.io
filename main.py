@@ -1,15 +1,6 @@
 # Import required libraries
 import streamlit as st
-import pandas as pd
-import requests
-from streamlit_lottie import st_lottie
-from PIL import Image
 
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
 
 
 background_color = "#f0f0f0"  # Replace with your desired background color
@@ -88,11 +79,43 @@ elif nav_selection == "My Projects":
         
         This exemplary project showcases my prowess in planetary data analysis, scientific computing, and Docker containerization. By harnessing the unparalleled capabilities of SpicePy and Spiceypy, I have deepened our collective understanding of planetary dynamics, contributing valuable data for astronomical research and education. My passion for space exploration and scientific advancement compels me to continuously explore new frontiers in the realm of astrophysics and planetary sciences.
         
-        This project description provides a comprehensive overview of your planetary data analysis project. It emphasizes the key analyses and discoveries made, as well as the significance of your work for scientific research and exploration. Customize the description further to highlight any other significant contributions, challenges faced, or future endeavors related to your project. Replace `[Link to Demo Notebook]` with the actual URL where a demo Jupyter Notebook or documentation for your project is available.
+        This project description provides a comprehensive overview of your planetary data analysis project. It emphasizes the key analyses and discoveries made, as well as the significance of your work for scientific research and exploration. Customize the description further to highlight any other significant contributions, challenges faced, or future endeavors related to your project.
         """)
     st.write("[Link to Github Repo(https://github.com/PreetShah77/Space-Science-With-Python)]")
 
-    st.subheader("Project 2: Elephant Robot for Robocon 2023")
+    st.subheader("Project 2: Object Detection using TensorFlow")
+    st.write("""## Object Detection using Teachable Machine and TensorFlow.js
+        
+        In this ambitious project, I developed a powerful object detection system using Google Teachable Machine and a comprehensive dataset sourced from Kaggle. The primary objective was to create a highly accurate and versatile model capable of detecting a wide range of objects, including cars, bikes, people, dogs, cats, horses, flowers, and more.
+        
+        **Key Features:**
+        
+        1. Google Teachable Machine:
+           Leveraging the user-friendly Google Teachable Machine platform, I meticulously trained a custom machine learning model exclusively for object detection. The intuitive interface enabled me to efficiently train the model using the diverse Kaggle dataset.
+        
+        2. Extensive Kaggle Dataset:
+           For comprehensive object detection, I carefully curated an extensive dataset sourced from Kaggle. The dataset comprised a diverse array of images, encompassing various object classes and scenarios, thereby enhancing the model's accuracy and adaptability.
+        
+        3. TensorFlow.js Export:
+           Following successful model training, I harnessed the capabilities of TensorFlow.js, a powerful JavaScript library, to export the machine learning model. This crucial step enabled seamless integration of the model into web applications, facilitating real-time object detection directly within the user's browser.
+        
+        **Object Detection in the Browser:**
+        
+        The culmination of this project was the creation of a dynamic web application featuring real-time object detection capabilities. Users had the convenience of uploading images or using their webcams to experience immediate and accurate object detection within their browsers. This interactive and immersive experience was made possible through the integration of the TensorFlow.js-exported model.
+        
+        **Applications and Future Enhancements:**
+        
+        The potential applications of this object detection system are vast, encompassing automated image tagging, surveillance, and augmented reality interactions. Looking ahead, I envision enhancing the model's accuracy through fine-tuning and incorporating additional object classes to expand its already impressive capabilities.
+        
+        **Try the Demo:**
+        
+        Embark on a journey of real-time object detection with my captivating interactive demo:
+        
+        
+        """)
+    st.write("[Link to Object Detection Demo](https://teachablemachine.withgoogle.com/models/GjYNX-oT4/)")
+
+    st.subheader("Project 3: Elephant Robot for Robocon 2023")
     st.write("""## Robocon 2023: Intelligent Robot Control using Machine Learning and ESP Integration
         
         In this project, I developed and programmed two intelligent robots for Robocon 2023, adhering to the theme provided by the competition. The robots were designed to showcase cutting-edge technologies and innovative control mechanisms to deliver exceptional performance on the competition field.
@@ -110,7 +133,7 @@ elif nav_selection == "My Projects":
     st.write("[Link to Github Repo(https://github.com/PreetShah77/Robocon-2023)]")
 
     # Project 1
-    st.subheader("Project 3: Chat with Your Data")
+    st.subheader("Project 4: Chat with Your Data")
     st.write("""## Personalized Chatbot with Langchain's OpenAI Embeddings and Streamlit
         
         In this project, I developed a personalized chatbot using Langchain's OpenAI embeddings and Streamlit. The chatbot is trained to understand user input better and deliver contextually relevant responses. By integrating user-specific data, it can provide personalized answers tailored to individual preferences and past interactions.
@@ -124,7 +147,7 @@ elif nav_selection == "My Projects":
     st.write("[Link to Github Repo(https://github.com/PreetShah77/Chatbot-using-Own-Data)]")
 
     # Project 2
-    st.subheader("Project 4: Sql Query Generator")
+    st.subheader("Project 5: Sql Query Generator")
     st.write("""## Natural Language SQL Query Generator with Langchain's Chains Embeddings and React UI
         
         In this project, I created a powerful SQL query generator that understands natural English language input and converts it into structured SQL queries. Leveraging the capabilities of Langchain's chains embeddings and LLm (Language Model for SQL), the generator can comprehend complex language patterns and produce accurate SQL queries.
@@ -137,7 +160,7 @@ elif nav_selection == "My Projects":
         The project showcases my expertise in NLP, data processing, and web development. By enabling users to generate SQL queries effortlessly, it simplifies data retrieval and analysis tasks.""")
     st.write("[Link to Github Repo(https://github.com/PreetShah77/Sqlgenerator)]")
 
-    st.subheader("Project 5: Stock Market Prediction System")
+    st.subheader("Project 6: Stock Market Prediction System")
     st.write("""## Stock Market Prediction System with Machine Learning and Streamlit
         
         In this project, I developed a robust stock market prediction system using machine learning techniques and the Stock Market India dataset sourced from Kaggle. The system is designed to forecast stock prices, enabling investors to make informed decisions and optimize their trading strategies.
@@ -152,7 +175,7 @@ elif nav_selection == "My Projects":
         """)
     st.write("[Link to Github Repo(https://project2.com)]")
 
-    st.subheader("Project 6: Movie Prediction System")
+    st.subheader("Project 7: Movie Prediction System")
     st.write("""## Movie Prediction System with Machine Learning and Streamlit
         
         In this project, I developed an advanced movie prediction system using machine learning techniques and the TMDb_5000 dataset. The system is designed to recommend movies based on user preferences and historical data, providing personalized movie suggestions for an enhanced entertainment experience.
@@ -168,7 +191,7 @@ elif nav_selection == "My Projects":
         """)
     st.write("[Link to Github Repo(https://github.com/PreetShah77/Movie-managment-system)]")
 
-    st.subheader("Project 7: Fighting Brawler")
+    st.subheader("Project : Fighting Brawler")
     st.write("""## Multiplayer Game with Pygame: Epic Shadow Fight
         
         In this project, I developed an action-packed multiplayer game using Pygame, where players can engage in thrilling combat battles with cool sprites and immersive game physics. Inspired by the popular game Shadow Fight, this project offers an exciting and competitive gaming experience for users.
