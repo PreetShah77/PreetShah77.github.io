@@ -1,4 +1,4 @@
-# Import required libraries
++# Import required libraries
 import streamlit as st
 
 
@@ -160,6 +160,28 @@ elif nav_selection == "My Projects":
         The project showcases my expertise in NLP, data processing, and web development. By enabling users to generate SQL queries effortlessly, it simplifies data retrieval and analysis tasks.""")
     st.write("[Link to Github Repo(https://github.com/PreetShah77/Sqlgenerator)]")
 
+        st.subheader("Project 5: Sql Query Generator")
+        st.write("""' Breast Cancer Prediction Application using Numpy, Scikit-learn, and Streamlit
+        
+        ' In this ambitious project, I developed a powerful breast cancer prediction application that aids medical professionals in diagnosing breast cancer at an early stage. The application leverages the combined strength of Numpy and Scikit-learn for robust model development and employs Streamlit for creating an intuitive and user-friendly front-end.
+        
+        ' Key Features:
+        
+        ' 1. Dataset and Parameter Selection:
+        '    To build a reliable breast cancer prediction model, I curated a comprehensive dataset containing a wide array of parameters related to breast cancer cases. These essential features encompassed tumor size, cell shape, cell size, and other critical factors known to influence cancer diagnosis.
+        
+        ' 2. Model Development with Scikit-learn:
+        '    Harnessing the versatility of Scikit-learn, I explored various machine learning algorithms, including logistic regression, decision trees, and random forests. Rigorous model evaluation and hyperparameter tuning ensured optimal performance and reduced the risk of misdiagnosis.
+        
+        ' 3. Streamlit Front-end:
+        '    The application's front-end was crafted using Streamlit, a user-friendly framework that facilitated the seamless integration of the breast cancer prediction model. The Streamlit interface provided an intuitive experience for medical professionals and researchers, enabling them to easily access and utilize the app's predictive capabilities.
+        
+        ' Empowering Medical Diagnosis:
+        
+        ' The breast cancer prediction application serves as an indispensable tool in the hands of medical practitioners. By providing quick and accurate predictions based on patient parameters
+        """)
+    st.write("[Link to Github Repo(https://github.com/PreetShah77/CancerPrediction)]")
+    
     st.subheader("Project 6: Stock Market Prediction System")
     st.write("""## Stock Market Prediction System with Machine Learning and Streamlit
         
@@ -191,7 +213,7 @@ elif nav_selection == "My Projects":
         """)
     st.write("[Link to Github Repo(https://github.com/PreetShah77/Movie-managment-system)]")
 
-    st.subheader("Project : Fighting Brawler")
+    st.subheader("Project 8: Fighting Brawler")
     st.write("""## Multiplayer Game with Pygame: Epic Shadow Fight
         
         In this project, I developed an action-packed multiplayer game using Pygame, where players can engage in thrilling combat battles with cool sprites and immersive game physics. Inspired by the popular game Shadow Fight, this project offers an exciting and competitive gaming experience for users.
