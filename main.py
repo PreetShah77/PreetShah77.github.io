@@ -158,9 +158,9 @@ elif nav_selection == "My Projects":
         - Developed a user-friendly React UI for seamless interactions.
         
         The project showcases my expertise in NLP, data processing, and web development. By enabling users to generate SQL queries effortlessly, it simplifies data retrieval and analysis tasks.""")
-    st.write("[Link to Github Repo(https://github.com/PreetShah77/Sqlgenerator)]")
+        st.write("[Link to Github Repo(https://github.com/PreetShah77/Sqlgenerator)]")
 
-        st.subheader("Project 5: Sql Query Generator")
+        st.subheader("Project 5: Cancer Prediction Using MachineLearning")
         st.write("""' Breast Cancer Prediction Application using Numpy, Scikit-learn, and Streamlit
         
         ' In this ambitious project, I developed a powerful breast cancer prediction application that aids medical professionals in diagnosing breast cancer at an early stage. The application leverages the combined strength of Numpy and Scikit-learn for robust model development and employs Streamlit for creating an intuitive and user-friendly front-end.
