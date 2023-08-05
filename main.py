@@ -1,15 +1,29 @@
 # Import required libraries
 import streamlit as st
 import pandas as pd
+import requests
+from streamlit_lottie import st_lottie
+from PIL import Image
+
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
 
 background_color = "#f0f0f0"  # Replace with your desired background color
 st.set_page_config(page_title="My Portfolio", layout="wide", initial_sidebar_state="expanded", page_icon=":rocket:")
 st.markdown(f"""<style>body{{background-color: {background_color};}}</style>""", unsafe_allow_html=True)
 # App Title
 st.title("My Awesome Portfolio")
+lottie1 = "971.png"
 
 # Sidebar
-st.sidebar.title("Navigation")
+st.sidebar.title("My Portfolio")
+st.sidebar.markdown("---")
+st.sidebar.image(lottie1, width=300)
+st.sidebar.markdown("---")
 nav_selection = st.sidebar.radio("Go to:", ("About Me", "My Projects"))
 
 # Main content
@@ -35,11 +49,50 @@ if nav_selection == "About Me":
         st.write("I'm excited to share my projects and experiences with you through this portfolio. Feel free to "
                  "explore my work, and don't hesitate to reach out to me if you have any questions or collaboration "
                  "opportunities.")
+        st.write("""
+        
+        
+        
+        
+        
+        """)
 
 elif nav_selection == "My Projects":
     st.header("My Projects")
+    st.subheader("Project 1: Space Science Using Python")
+    st.write("""## Planetary Data Analysis with SpicePy and Spiceypy Framework
+        
+        In this ambitious project, I delved into the fascinating realm of planetary data analysis using Python's SpicePy and Spiceypy framework, which were meticulously developed by NASA JPL (Jet Propulsion Laboratory) and ESA (European Space Agency). Armed with these powerful libraries, I embarked on an exploration of real-time information about various planetary bodies, seeking to uncover a wealth of critical parameters such as distance, speed, positioning, and velocity.
+        
+        **Key Analyses and Discoveries:**
+        
+        1. Real-Time Distance Calculation:
+           Leveraging the capabilities of SpicePy and Spiceypy, I devised intricate algorithms to accurately calculate the real-time distance between diverse planets within our awe-inspiring solar system. This led to groundbreaking insights into their complex orbital dynamics, paving the way for deeper understanding and celestial observations.
+        
+        2. Planetary Speed and Velocity:
+           Through comprehensive data analysis and simulations, I probed the mysteries of planetary motion, uncovering the secrets behind their varying speeds and velocities. This revelation provided essential knowledge about gravitational interactions and planetary behavior across space and time.
+        
+        3. Planetary Positioning:
+           Armed with the powerful SpicePy and Spiceypy framework, I undertook an intensive investigation into the precise positioning of planets relative to each other and the radiant Sun. This meticulous analysis enabled me to create mesmerizing visualizations, presenting celestial bodies in their correct spatial orientations.
+        
+        4. Orbital Trajectories:
+           Fascinated by the graceful dance of planets, I embarked on a captivating journey to visualize their orbital trajectories. With the help of SpicePy and Spiceypy, I skillfully crafted dynamic visual representations of planetary journeys, offering a stunning and interactive experience for all stargazing enthusiasts.
+        
+        5. Customized Environment with Docker:
+           To enhance development efficiency and ensure a seamless workflow, I employed Docker containers to create a customized environment. This approach enabled me to maintain a consistent and isolated environment, optimizing productivity during data exploration and code development.
+        
+        6. Jupyter Notebook Development:
+           Enabling an interactive and immersive data analysis experience, I wholeheartedly embraced Jupyter Notebook as my coding companion. Through Jupyter's versatility, I immersed myself in a realm of exploration, empowering me to share my groundbreaking findings and valuable insights with the world.
+        
+        **Significance and Future Endeavors:**
+        
+        This exemplary project showcases my prowess in planetary data analysis, scientific computing, and Docker containerization. By harnessing the unparalleled capabilities of SpicePy and Spiceypy, I have deepened our collective understanding of planetary dynamics, contributing valuable data for astronomical research and education. My passion for space exploration and scientific advancement compels me to continuously explore new frontiers in the realm of astrophysics and planetary sciences.
+        
+        This project description provides a comprehensive overview of your planetary data analysis project. It emphasizes the key analyses and discoveries made, as well as the significance of your work for scientific research and exploration. Customize the description further to highlight any other significant contributions, challenges faced, or future endeavors related to your project. Replace `[Link to Demo Notebook]` with the actual URL where a demo Jupyter Notebook or documentation for your project is available.
+        """)
+    st.write("[Link to Github Repo(https://github.com/PreetShah77/Space-Science-With-Python)]")
 
-    st.subheader("Project 1: Elephant Robot for Robocon 2023")
+    st.subheader("Project 2: Elephant Robot for Robocon 2023")
     st.write("""## Robocon 2023: Intelligent Robot Control using Machine Learning and ESP Integration
         
         In this project, I developed and programmed two intelligent robots for Robocon 2023, adhering to the theme provided by the competition. The robots were designed to showcase cutting-edge technologies and innovative control mechanisms to deliver exceptional performance on the competition field.
@@ -57,7 +110,7 @@ elif nav_selection == "My Projects":
     st.write("[Link to Github Repo(https://github.com/PreetShah77/Robocon-2023)]")
 
     # Project 1
-    st.subheader("Project 2: Chat with Your Data")
+    st.subheader("Project 3: Chat with Your Data")
     st.write("""## Personalized Chatbot with Langchain's OpenAI Embeddings and Streamlit
         
         In this project, I developed a personalized chatbot using Langchain's OpenAI embeddings and Streamlit. The chatbot is trained to understand user input better and deliver contextually relevant responses. By integrating user-specific data, it can provide personalized answers tailored to individual preferences and past interactions.
@@ -71,7 +124,7 @@ elif nav_selection == "My Projects":
     st.write("[Link to Github Repo(https://github.com/PreetShah77/Chatbot-using-Own-Data)]")
 
     # Project 2
-    st.subheader("Project 3: Sql Query Generator")
+    st.subheader("Project 4: Sql Query Generator")
     st.write("""## Natural Language SQL Query Generator with Langchain's Chains Embeddings and React UI
         
         In this project, I created a powerful SQL query generator that understands natural English language input and converts it into structured SQL queries. Leveraging the capabilities of Langchain's chains embeddings and LLm (Language Model for SQL), the generator can comprehend complex language patterns and produce accurate SQL queries.
@@ -84,7 +137,7 @@ elif nav_selection == "My Projects":
         The project showcases my expertise in NLP, data processing, and web development. By enabling users to generate SQL queries effortlessly, it simplifies data retrieval and analysis tasks.""")
     st.write("[Link to Github Repo(https://github.com/PreetShah77/Sqlgenerator)]")
 
-    st.subheader("Project 4: Stock Market Prediction System")
+    st.subheader("Project 5: Stock Market Prediction System")
     st.write("""## Stock Market Prediction System with Machine Learning and Streamlit
         
         In this project, I developed a robust stock market prediction system using machine learning techniques and the Stock Market India dataset sourced from Kaggle. The system is designed to forecast stock prices, enabling investors to make informed decisions and optimize their trading strategies.
@@ -99,7 +152,7 @@ elif nav_selection == "My Projects":
         """)
     st.write("[Link to Github Repo(https://project2.com)]")
 
-    st.subheader("Project 5: Movie Prediction System")
+    st.subheader("Project 6: Movie Prediction System")
     st.write("""## Movie Prediction System with Machine Learning and Streamlit
         
         In this project, I developed an advanced movie prediction system using machine learning techniques and the TMDb_5000 dataset. The system is designed to recommend movies based on user preferences and historical data, providing personalized movie suggestions for an enhanced entertainment experience.
@@ -115,7 +168,7 @@ elif nav_selection == "My Projects":
         """)
     st.write("[Link to Github Repo(https://github.com/PreetShah77/Movie-managment-system)]")
 
-    st.subheader("Project 6: Fighting Brawler")
+    st.subheader("Project 7: Fighting Brawler")
     st.write("""## Multiplayer Game with Pygame: Epic Shadow Fight
         
         In this project, I developed an action-packed multiplayer game using Pygame, where players can engage in thrilling combat battles with cool sprites and immersive game physics. Inspired by the popular game Shadow Fight, this project offers an exciting and competitive gaming experience for users.
@@ -134,4 +187,4 @@ elif nav_selection == "My Projects":
 
 
 st.markdown("---")
-st.write("Contact: preetshah0707@gmail.com | Follow me on [LinkedIn](https://www.linkedin.com/in/preet-shah-176a2822b/)")
+st.write("Contact: preetshah0707@gmail.com | Follow me on [LinkedIn](https://www.linkedin.com/in/yourprofile/)")
